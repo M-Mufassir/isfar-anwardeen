@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-hutch-50: #fff4ed;
+  --color-hutch-100: #ffe6d5;
+  --color-hutch-400: #ff8533;
+  --color-hutch-500: #f36d21;
+  --color-hutch-600: #ff6601;
+  --color-hutch-700: #d45208;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Subtle metallic brushed-titanium texture */
+.metal-card-surface {
+  background:
+    radial-gradient(120% 90% at 15% 10%, rgba(243, 109, 33, 0.16) 0%, transparent 52%),
+    radial-gradient(90% 80% at 90% 95%, rgba(255, 255, 255, 0.06) 0%, transparent 55%),
+    repeating-linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.015) 0px,
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    linear-gradient(145deg, #16181f 0%, #0b0c10 55%, #12141b 100%);
+}
+
+/* Subtle technical grid backdrop */
+.bg-telecom-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+.bg-telecom-grid-light {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
